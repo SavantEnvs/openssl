@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: acert
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/acert/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/acert
+    libfuzzer: true

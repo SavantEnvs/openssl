@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: quic-rcidm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/quic-rcidm/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/quic-rcidm
+    libfuzzer: true

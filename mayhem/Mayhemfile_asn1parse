@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: asn1parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/asn1parse/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/asn1parse
+    libfuzzer: true

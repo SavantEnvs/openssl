@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: conf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/conf/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/conf
+    libfuzzer: true

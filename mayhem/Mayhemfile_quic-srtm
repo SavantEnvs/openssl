@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: quic-srtm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/quic-srtm/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/quic-srtm
+    libfuzzer: true

@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: v3name
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/v3name/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/v3name
+    libfuzzer: true

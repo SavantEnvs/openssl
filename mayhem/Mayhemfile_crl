@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: crl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/crl/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/crl
+    libfuzzer: true

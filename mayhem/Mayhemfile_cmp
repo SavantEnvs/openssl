@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: cmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cmp/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/cmp
+    libfuzzer: true

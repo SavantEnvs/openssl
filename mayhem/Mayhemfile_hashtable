@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: hashtable
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hashtable/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/hashtable
+    libfuzzer: true

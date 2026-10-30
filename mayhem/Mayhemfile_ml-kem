@@ -1,0 +1,8 @@
+project: savantenvs/openssl
+target: ml-kem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ml-kem/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/ml-kem
+    libfuzzer: true
